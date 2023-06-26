@@ -1,0 +1,19 @@
+{
+  "name": "3svelteghpages",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "homepage": "https://didriksn.github.io/3svelteghpages",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^2.0.3",
+    "gh-pages": "^5.0.0",
+    "svelte": "^3.57.0",
+    "vite": "^4.3.2"
+  }
+}
