@@ -97,7 +97,7 @@
   .text-related {
     display: flex;
     flex-direction: column;
-    transform: translate(0, 10%);
+    transform: translate(0, 50%);
   }
 
   .process {
@@ -108,29 +108,26 @@
   }
 
   .not-submit {
-    margin-left: auto;
-    margin-right: auto;
-    width: 20vw;
-    font-family: 'Roboto Mono', monospace;
-    height: 15vh;
-    border-radius: 20px;
-    border: none;
     background-color: gray;
-    font-size: x-large;
   }
 
   .submit {
-    margin-left: auto;
-    margin-right: auto;
-    width: 20vw;
-    font-family: 'Roboto Mono', monospace;
-    height: 15vh;
-    border-radius: 20px;
-    border: none;
     background-color: #60a985;
-    font-size: x-large;
     cursor: pointer;
     transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  }
+
+  .not-submit,
+  .submit {
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 20vw; */
+    min-width: 100px;
+    font-family: 'Roboto Mono', monospace;
+    height: 5vh;
+    border-radius: 20px;
+    border: none;
+    font-size: x-large;
   }
 
   .submit:hover {
@@ -156,7 +153,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -25%);
+    transform: translate(-50%, -28%);
     height: 65vh;
     width: 95vw;
     border-radius: 20px;
