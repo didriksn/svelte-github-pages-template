@@ -114,7 +114,7 @@
   .submit {
     background-color: #60a985;
     cursor: pointer;
-    transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    /* transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s; */
   }
 
   .not-submit,
@@ -129,7 +129,7 @@
     border: none;
     font-size: x-large;
   }
-
+/* 
   .submit:hover {
     background-color: #70b291;
     transform: translate(0, -2px);
@@ -139,7 +139,7 @@
   .submit:active {
     background-color: #60a985;
     box-shadow: inset 0 -5px 10px black;
-  }
+  } */
 
   .char {
     color: #70b291;
@@ -182,10 +182,10 @@
     height: 5vh;
     cursor: pointer;
   }
-
+/* 
   .gen-new:active {
     background-color: #60a985;
     box-shadow: inset 0 -1px 5px black;
-  }
+  } */
 
   </style>
