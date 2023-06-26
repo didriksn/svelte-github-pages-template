@@ -81,7 +81,7 @@
   }
 
   .write {
-    width: 70vw;
+    width: 65vw;
     font-family: 'Roboto Mono', monospace;
     height: 25vh;
     resize: none;
