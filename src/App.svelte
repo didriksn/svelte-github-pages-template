@@ -57,7 +57,7 @@
       <p class="char">(Message must be more than three characters long)</p>
     </div>
   </div>
-  <div class="display" id="display">{pool[randomIndex]}<button class="gen-new" on:click={generateNew}>Generate new message {randomIndex}</button></div>
+  <div class="display" id="display">{pool[randomIndex]}<button class="gen-new" on:click={generateNew}>Generate new message</button></div>
 </body>
 
 
@@ -156,12 +156,11 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -27%);
+    transform: translate(-50%, -25%);
     height: 65vh;
-    width: 99%;
+    width: 95vw;
     border-radius: 20px;
-    border: 5px solid #70b291;
-    display: flex;
+    border: 3px solid #70b291;
     /* align-items: center; */
     /* justify-content: center; */
     font-family: 'Roboto Mono', monospace;
@@ -182,7 +181,7 @@
     font-family: 'Roboto Mono', monospace;
     border-radius: 20px;
     border: none;
-    width: 10vw;
+    width: 172px;
     height: 5vh;
     cursor: pointer;
   }
