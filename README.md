@@ -1,47 +1,70 @@
-# Svelte + Vite
+# Svelte Template with GitHub Pages Compatibility
+This Svelte template provides a starting point for building web applications using the Svelte framework. It is designed with built-in compatibility for deploying your application to GitHub Pages.
 
-This template should help get you started developing with Svelte in Vite.
+## Features
+* **Svelte**: Utilizes the Svelte framework for building efficient and reactive web applications.
+* **GitHub Pages Compatibility**: Designed to seamlessly work with GitHub Pages for easy deployment.
+* **Optimized Build**: Configured to generate optimized and production-ready builds.
+* **Routing**: Includes client-side routing for creating multi-page applications.
+* **CSS Preprocessor**: Supports CSS preprocessor, allowing you to use languages like SCSS or Less.
+* **Static Assets**: Easily manage and reference static assets such as images or fonts.
+* **Development Server**: Includes a development server for rapid local development and testing.
+* **Hot Module Replacement**: Supports Hot Module Replacement for instant feedback during development.
 
-## Recommended IDE Setup
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+## Prerequisites
+Make sure you have the following installed on your system:
 
-## Need an official Svelte framework?
+* Node.js (v12 or higher)
+* npm (Node Package Manager)
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
 
-## Technical considerations
+# Getting Started
+To use this template, follow these steps:
 
-**Why use this over SvelteKit?**
-
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
-
-This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
-
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
-
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
-
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
-
-**Why include `.vscode/extensions.json`?**
-
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
-
-**Why enable `checkJs` in the JS template?**
-
-It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/sveltejs/svelte-hmr/tree/master/packages/svelte-hmr#preservation-of-local-state).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```js
-// store.js
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
+1. Clone or download the repository to your local machine.
+2. Open a terminal and navigate to the project directory.
+3. Install the project dependencies by running the following command:
 ```
+npm install
+```
+
+4. Start the development server with the following command:
+```
+npm run dev
+```
+
+5. Begin developing your Svelte application by modifying the files in the `src` directory.
+
+
+## Building for production, and deploying to GitHub Pages
+To build your application for production, and deploy it to GitHub Pages, follow these steps:
+1. Run the following command to create an optimized build of your application in the `dist` directory, and create (or update) a "gh-pages" branch containing all the `dist` files. This will also automatically enable GitHub Pages for your site, and set the location to the "gh-pages" branch so you don't have to worry about that.
+```
+npm run deploy
+```
+2. You will have a **vite.config.js** file that looks something like this:
+```javascript
+import { defineConfig } from 'vite'
+import { svelte } from '@sveltejs/vite-plugin-svelte'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  base: "/svelte-github-pages-template/", // name of your github site
+  plugins: [svelte()]
+})
+```
+It is very important that you switch out "svelte-github-pages-template", with ***YOUR*** repository name (do not delete the "//", it has to be there)
+
+# Customization
+Feel free to modify this template to suit your specific needs. You can add additional packages, configure routing, customize the build process, or extend the functionality as required.
+
+# Resources
+* [Svelte Documentation](https://svelte.dev/docs/introduction)
+* [GitHub Pages Documentation](https://docs.github.com/en/pages)
+
+# Important Notes
+This is **NOT** SvelteKit, and the original project was made by running `npm init vite` and selecting the `svelte` option.
+
+# License
+This template is open source and available under the [MIT License](https://opensource.org/license/mit/). Feel free to use, modify, and distribute it as needed.
