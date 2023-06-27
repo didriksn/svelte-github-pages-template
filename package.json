@@ -5,7 +5,7 @@
   "type": "module",
   "homepage": "https://didriksn.github.io/3svelteghpages",
   "scripts": {
-    "dev": "concurrently \"vite dev\" \"node src/server.js\"",
+    "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
     "deploy": "npm run build && gh-pages -d dist"
