@@ -3,6 +3,6 @@ import { svelte } from '@sveltejs/vite-plugin-svelte'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/3svelteghpages/", // name of your root directory
+  base: "/svelte-github-pages-template/", // name of your root directory
   plugins: [svelte()]
 })
