@@ -23,8 +23,12 @@ Make sure you have the following installed on your system:
 To use this template, follow these steps:
 
 1. Clone or download the repository to your local machine.
-2. Open a terminal and navigate to the project directory.
-3. Install the project dependencies by running the following command:
+2. Set the remote URL to your own repository like this:
+```
+git remote set-url origin <your-repository-url>
+```
+3. Open a terminal and navigate to the project directory.
+4. Install the project dependencies by running the following command:
 ```
 npm install
 ```
